@@ -1,0 +1,54 @@
+.NavBarMain{
+  
+    background-color: rgb(19,25,33);
+    padding: 10px;
+    color: aliceblue;
+    display: flex;
+    flex-direction: row;
+}
+
+
+.Boxlocation, .BoxInf{
+    margin-left: 20px;
+}
+
+.Boxlocation:hover, .BoxInf:hover{
+    cursor: pointer;
+}
+
+.location{
+    color:white;
+    text-decoration: none;
+}
+
+.location:hover{
+    cursor: pointer;
+}
+
+.textwrap{
+    display: flex;
+    flex-direction: column;
+}
+
+.Search{
+    margin-left: 20px;
+    height: 40px;
+    width: 50%;
+    margin: auto 0 auto 20px;
+    border-radius: 5px;
+    outline: none;
+}
+
+.navbar-logo{
+    display: inline-block;
+    vertical-align: middle;
+    width: 80px;
+    margin: auto 0;
+  }
+
+.navbar-logo img{
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  

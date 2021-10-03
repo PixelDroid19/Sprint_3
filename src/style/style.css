@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+}
+
+body{
+    background-color:rgb(234,237,237);
+}
+
+.ProductoAdd{
+    width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 5px;
+    background-color:rgb(255,255,255);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+   
+}
+
+
+.ButtonBox{
+    display: flex; 
+    flex-direction: row;
+    margin: 0 auto;
+}
+
+.btnCustom{
+   border: none;
+   padding: 8px;
+   text-align: center;
+   margin-left: 20px;
+}
+
+.Link{
+    color: white;
+    text-decoration: none;
+}
+
+.Link:hover{
+    color: rgb(146, 143, 143);
+    text-decoration: none;
+}
+
+.BoxImage{
+    width: 500px;
+}
+
+.BoxImage{
+    display: flex;
+    width: 200px;
+    flex-direction: row;
+}
+
+.App {
+    font-family: sans-serif;
+    text-align: center;
+  }
+  .perimeter {
+    max-width: 1324px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+ 
+  .image {
+    flex: 0 0 100%;
+  }
+
+  .buttonCustom{
+      font-size: 12px;
+      border: none;
+      border-radius: 20px;
+    background-color: rgb(177, 180, 182);
+  }
+
+  .buttonCustom:hover{
+  background-color: rgb(145, 153, 158);
+}
+  
+  .copy {
+    padding: 20px;
+    font-family: sans-serif;
+  }
+
+  .BoxRelacionados{
+      display: flex;
+
+  }
+
+  .imgCover{
+
+
+    background: url(https://www.cnet.com/a/img/aU_HCKJHawtGw1SANkgHFwfY_R0=/1092x0/2021/02/09/9c850c43-30c3-4381-9f32-d7a8f4dff5f2/amazon-shopping-2551.jpg) no-repeat;
+  }
+
+  .CoverBox{
+    width: 200px;
+  }
+  
+  .setData{
+    text-decoration: none;
+  }
+  
+  @media (min-width: 415px) {
+    .perimeter {
+      flex-direction: row;
+    }
+    
+    .image {
+      flex: 0 0 50%;
+    }
+  }
+  
+  @media (min-width: 800px) {
+    .image {
+      flex: 0 0 33.5%;
+    }
+  }
+  

@@ -2,8 +2,12 @@ import React from "react";
 import { useSelector } from "react-redux";
 import ReactImageMagnify from "react-image-magnify";
 import Relacionados from "./relacionados";
+import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { setData} from "../../actions/actionEstudent";
 
 const Detalles = () => {
+  const dispatch = useDispatch();
   const detalle = useSelector((state) => state.Datos);
   console.log("detalles", detalle);
 
@@ -46,6 +50,12 @@ const Detalles = () => {
           <h5>Acerca de este artículo</h5>
           <p className="App-intro">{descripcion}</p>
         </div>
+        <Link
+                      className="setData"
+                      to="/editar"
+                      onClick={() => dispatch(setData(detalle))}>
+                      <strong>Editar</strong>
+            </Link>
       </div>
 
       <Relacionados />

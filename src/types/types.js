@@ -10,5 +10,6 @@ export const typesProducts = {
     register: 'register',
     list: 'list',
     delete: 'delete',
+    editar: 'editar',
     productClick: 'productClick'
 }

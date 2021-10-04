@@ -3,21 +3,28 @@ import { useDispatch } from "react-redux";
 import { logout } from "../../actions/actionLogin";
 import { useForm } from "../../hooks/useForm";
 import { fileUpload } from "../../helpers/FileUpload";
-import { registerEstudent, listProducts, EditarProducts } from "../../actions/actionEstudent";
+import { listProducts, EditarProducts } from "../../actions/actionEstudent";
+import { useSelector } from "react-redux";
+import { useState } from "react";
 
-export const Estudiantes = ({ history }) => {
+const Editar = ({ history }) => {
   const dispatch = useDispatch();
+ 
+
+  const detalle = useSelector((state) => state.Datos);
+  console.log("detalles", detalle);
+
 
   useEffect(() => {
      dispatch(listProducts());
   }, [])
 
   const [values, handleInputChange, reset] = useForm({
-    descripcion: "",
-    nombres: "",
-    Precio: "",
-    telefono: "",
-    imagen: "",
+    descripcion: '',
+    nombres: '',
+    Precio: '',
+    telefono: '',
+    imagen: '',
   });
 
   let {
@@ -29,23 +36,21 @@ export const Estudiantes = ({ history }) => {
   } = values;
 
   const handleRegistro = (e) => {
+    const Antiguo = detalle.nombre
     e.preventDefault();
     dispatch(
-      registerEstudent(
+        EditarProducts(
+        Antiguo,
         descripcion,
         nombres,
         Precio,
         telefono,
         imagen
-      )
+      ) 
     );
     reset();
   };
 
-  const handleLogout = () => {
-    dispatch(logout());
-    history.replace("/login");
-  };
 
   const handlePictureClick = () => {
     document.querySelector("#fileSelector").click();
@@ -76,6 +81,7 @@ export const Estudiantes = ({ history }) => {
               name="nombres"
               id="nombres"
               value={nombres}
+              placeholder={detalle.nombre}
               onChange={handleInputChange}
             />
           </div>
@@ -88,6 +94,7 @@ export const Estudiantes = ({ history }) => {
               name="descripcion"
               id="descripcion"
               value={descripcion}
+              placeholder={detalle.descripcion}
               rows="5" cols="20"
               onChange={handleInputChange}
             />
@@ -101,6 +108,7 @@ export const Estudiantes = ({ history }) => {
               name="Precio"
               id="Precio"
               value={Precio}
+              placeholder={detalle.Precio}
               onChange={handleInputChange}
             />
           </div>
@@ -113,6 +121,7 @@ export const Estudiantes = ({ history }) => {
               name="telefono"
               id="telefono"
               value={telefono}
+              placeholder={detalle.telefono}
               onChange={handleInputChange}
             />
           </div>
@@ -143,16 +152,7 @@ export const Estudiantes = ({ history }) => {
               Guardar
             </button>
           </div>
-
-          <div>
-            <button
-              className="btn btn-primary btnCustom"
-              type="button"
-              onClick={handleLogout}
-            >
-              Logout
-            </button>
-          </div>
+          
           </div>
 
         </div>
@@ -161,3 +161,5 @@ export const Estudiantes = ({ history }) => {
     </div>
   );
 };
+
+export default Editar

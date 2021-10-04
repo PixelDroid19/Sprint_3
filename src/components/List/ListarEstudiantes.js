@@ -11,10 +11,10 @@ import {
 } from "@mui/material";
 
 import { useDispatch } from "react-redux";
-import { deleteProducts, setData} from "../../actions/actionEstudent";
+import { deleteProducts,setData} from "../../actions/actionEstudent";
 import { Link } from "react-router-dom";
 
-export const ListarEstudiantes = () => {
+export const ListarEstudiantes = ({history}) => {
   const dispatch = useDispatch();
 
   const { products } = useSelector((store) => store.estudiante);
@@ -54,9 +54,9 @@ export const ListarEstudiantes = () => {
           <Link
                       className="setData"
                       to="/detalle"
-                      onClick={() => dispatch(setData(element))}>
+                      onClick={() => {dispatch(setData(element)); history.replace("/")}}>
                       <strong> {element.nombre}</strong>
-                    </Link>
+            </Link>
           </Typography>
 
           <Typography variant="body2" fontSize = "18px"  color="brown">

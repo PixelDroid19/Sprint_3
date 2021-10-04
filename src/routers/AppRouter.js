@@ -67,6 +67,13 @@ export default function AppRouter() {
             isAuthenticated={isLoggedIn}
             component={DashboardRouter}
           />
+
+          <PrivateRoute
+            exact
+            path="/editar"
+            isAuthenticated={isLoggedIn}
+            component={DashboardRouter}
+          />
         </Switch>
       </div>
     </Router>

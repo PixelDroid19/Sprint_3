@@ -29,18 +29,18 @@ shared professional on the SPRINT 3.
 
 # Info
 To update, load, delete and edit the data just use the Firebase Native Hooks
-updateDoc, // Update Database Data
-  addDoc, / Add Data to Database
-  collection, // collections are Data containers
-  getDocs, / GetData from Database
-  deleteDoc, // Delete Data from Database
-  doc, // reference is an object that simply points to a location in the database.
+- updateDoc, // Update Database Data
+- addDoc, / Add Data to Database
+- collection, // collections are Data containers
+- getDocs, / GetData from Database
+- deleteDoc, // Delete Data from Database
+- doc, // reference is an object that simply points to a location in the database.
 
 # Info spanish
-Para actualizar, cargar, eliminar y editar los datos solo utilice las Hook Nativos de Firebase 
-updateDoc, //Actualizar Datos del Database
-  addDoc,/Agregar Datos al Database
-  collection,//las colecciones son contenedores de Datos
-  getDocs, /ObtenerDatos del Database
-  deleteDoc,  //Borrar Datos del Database
-  doc, // referencia es un objeto que simplemente apunta a una ubicación en la base de datos.
+- Para actualizar, cargar, eliminar y editar los datos solo utilice las Hook Nativos de Firebase 
+- updateDoc, //Actualizar Datos del Database
+- addDoc,/Agregar Datos al Database
+- collection,//las colecciones son contenedores de Datos
+- getDocs, /ObtenerDatos del Database
+- deleteDoc,  //Borrar Datos del Database
+- doc, // referencia es un objeto que simplemente apunta a una ubicación en la base de datos.
